@@ -1,0 +1,18 @@
+<!-- pages/mine_photo/index.wxml -->
+<!-- <van-cell-group> -->
+    <van-cell class="mine-pyq" value="我的朋友圈" isLink />
+<!-- </van-cell-group> -->
+<ul class="pyq-list">
+    <li wx:for-items="{{ list }}" wx:for-item="item" wx:key="{{index}}"> 
+        <van-row>
+            <van-col span="4" style="text-align: center">{{ item.year == curYear ? item.month + "月" : item.year + "年" + item.month + "月" }}</van-col>
+            <van-col span="20">
+                <van-grid column-num="3" border="{{ false }}" >
+                    <van-grid-item use-slot wx:for="{{ pList[index] }}" wx:key="index" wx:for-item="pList[index]">
+                        <image style="width: 100%; height: 80px;border-radius:5px" src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg" />
+                    </van-grid-item>
+                </van-grid>
+            </van-col>
+        </van-row>
+    </li>
+</ul>

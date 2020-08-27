@@ -1,0 +1,6 @@
+/* pages/fontload/fontload.wxss */
+
+.new-font {
+  font-family: 'Bitstream Vera Serif Bold';
+  text-align: center;
+}

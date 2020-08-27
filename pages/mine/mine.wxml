@@ -1,0 +1,56 @@
+<!-- pages/mine/mine.wxml -->
+<!-- <text>pages/mine/mine.wxml</text> -->
+<view class="mine-header" bindtap="handleTap">
+    <image class="mine-header-logo" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <div class="mine-header-right">
+        <div class="right-item mine-name">
+            <p>用户昵称</p>
+        </div>
+        <div class="right-item mine-sub">
+            <p>微信号：dx474813637</p>
+            <view class="postion-div">
+                <van-icon name="qr" />
+                <van-icon class="mine-icon" name="arrow" />
+            </view>
+        </div>
+    </div>
+</view>
+<van-cell-group>
+    <van-cell title="资讯" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo01/demo01" />
+    <van-cell title="列表" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo02/demo02" />
+    <van-cell title="video" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo03/demo03" />
+    <van-cell title="progress" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo04/demo04" />
+    <van-cell title="form" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo05/demo05" />
+    <van-cell title="navigator" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/demo06/demo06" />
+    <van-cell title="map" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/map/map" />
+    <van-cell title="canvas" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/canvas/canvas" />
+    <van-cell title="opendata" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/opendata/opendata" />
+    <van-cell title="robot" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/robot/robot" />
+    <van-cell title="record" icon="newspaper-o" is-link link-type="navigateTo" url="/pages/record/record" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="支付" icon="gold-coin-o" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="收藏" icon="like-o" is-link link-type="navigateTo" url="/pages/mine_like/index" />
+    <van-cell title="相册" icon="photo-o" is-link link-type="navigateTo" url="/pages/mine_photo/index" />
+    <van-cell title="卡包" icon="balance-pay" is-link link-type="navigateTo" url="/pages/mine_card/index" />
+    <van-cell title="表情" icon="smile-o" is-link link-type="navigateTo" url="/pages/mine_emoji/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="设置" icon="setting-o" is-link link-type="navigateTo" url="/pages/mine_setting/index" />
+</van-cell-group>
+<!-- <comp1 bindmyevent="handleTapdx" class="comp1">
+    <comp2 name="给comp2传值" bindmyevent="handleTap2" class="demo" slot="slot1"></comp2>
+    <view slot="slot2">slot2</view>
+</comp1> -->
+<!-- <view bindtap="handletapp">获取comp</view>
+<count num="{{num}}" bindmyeventdx="handleCount1" id="num1"></count>
+<count num="{{num2}}" bindmyeventdx="handleCount2" id="num2"></count> -->
+
+<view bindtap="openSetting">openSetting</view>
+<button open-type="getUserInfo" bindgetuserinfo="getInfo2">openSetting2</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">getPhoneNumber</button>
+<view wx:if="{{!hasUserInfo}}" bindtap="getInfo">getInfo</view>
+<view wx:else>{{userInfo.nickName}}</view>
+

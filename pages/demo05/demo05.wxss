@@ -1,0 +1,6 @@
+/* pages/demo05/demo05.wxss */
+.i-row {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 5px;
+}

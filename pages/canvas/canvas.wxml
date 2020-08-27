@@ -1,0 +1,13 @@
+<!--pages/canvas/canvas.wxml-->
+<canvas 
+  canvas-id="myCan"
+  class="can"
+  bindtouchstart="handleStart"
+  bindtouchmove="handleMove"
+></canvas>
+<view class="tools">
+  <view class="tools-item bg1" data-width="5" bindtap="changeWidth">笔粗</view>
+  <view class="tools-item bg2" data-color="#fff" bindtap="changeColor">橡皮</view>
+  <view class="tools-item bg3" data-color="#f90" bindtap="changeColor">颜色</view>
+  <view class="tools-item bg4" data-color="#ff01b3" bindtap="changeColor">颜色</view>
+</view>

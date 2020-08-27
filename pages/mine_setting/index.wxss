@@ -1,0 +1,11 @@
+/* pages/mine_setting/index.wxss */
+.van-cell-group {
+    margin-bottom: 5px;
+}
+.setting-btn {
+    line-height: 45px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,7 @@
+<!--pages/record/record.wxml-->
+<button bindtap="startRecord">开始录音（旧版本）</button>
+<button bindtap="stopRecord">停止录音（旧版本）</button>
+<button bindtap="startRecordnew">开始录音（api）</button>
+<button bindtap="stopRecordnew">停止录音（api）</button>
+<button bindtap="fang">播放录制音频</button>
+

@@ -1,0 +1,54 @@
+/* pages/demo01/demo01.wxss */
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 30px;
+    color: #fff;
+    margin: 5px auto;
+}
+.nav-item {
+    padding: 0px 20px;
+    height: 100%;
+    white-space: nowrap;
+    background-color: #999;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.nav-item.active {
+    background-color: #333;
+}
+.bg {
+    color: #fff;
+    background-color: dodgerblue
+}
+.bg0 {
+    background-color: royalblue;
+}
+.bg1 {
+    background-color: pink;
+}
+.bg2 {
+    background-color: yellowgreen;
+}
+.bg3 {
+    background-color: peru;
+}
+.bg4 {
+    background-color: darkred;
+}
+.swiper-box {
+    /* min-height: 900px; */
+}
+.listH {
+    height: 100%;
+}
+.article {
+    font-size: 14px;
+    padding: 10px 5px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

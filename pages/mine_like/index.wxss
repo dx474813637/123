@@ -1,0 +1,23 @@
+/* pages/mine_like/index.wxss */
+.van-swipe-cell__right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    padding: 0px 5px
+}
+.van-search, .van-swipe-cell {
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.icon-edit,
+.icon-delete {
+    color: dodgerblue;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+} 
+.icon-delete {
+    color: red;
+}

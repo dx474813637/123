@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "comp1": "/components/comp1/index",
+    "comp2": "/components/comp2/index",
+    "count": "/components/count/index"
+  }
+}

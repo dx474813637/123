@@ -1,0 +1,4 @@
+<!--pages/fontload/fontload.wxml-->
+<view class="new-font">
+  Bitstream Vera Serif Bold
+</view>

@@ -1,0 +1,16 @@
+/* pages/mine_photo/index.wxss */
+.van-cell__value, .van-cell__right-icon-wrap {
+    color: dodgerblue;
+}
+ul li {
+    margin-bottom: 5px;
+}
+.van-row {
+    margin-bottom: 15px;
+}
+.van-grid-item__content--center {
+    /* background: transparent!important; */
+}
+page {
+    background-color: #fff;
+}

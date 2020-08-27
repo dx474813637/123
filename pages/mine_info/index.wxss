@@ -1,0 +1,4 @@
+/* pages/mine_info/index.wxss */
+.van-cell-group {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,38 @@
+<!--pages/robot/robot.wxml-->
+<scroll-view id="listView" scroll-y="true" scroll-with-animation="true" class="chart-box" scroll-top="{{top}}">
+	<view id="list">
+		<!-- <button open-type="getUserInfo" bindgetuserinfo="getInfo">getInfo</button> -->
+		<block wx:for="{{dataList}}" wx:key="index">
+			<view class="c-b-row isay">
+				<view class="c-b-pic">
+					<open-data type="userAvatarUrl"></open-data>
+					<!-- <image src="../../img/robot.png" class="tx"></image> -->
+				</view>
+				<view class="c-b-content">
+					<view class="c-b-text">{{item.i}}</view>
+				</view>
+			</view>
+
+			<view class="c-b-row robot">
+				<view class="c-b-pic">
+					<image src="../../img/robot.png" class="tx"></image>
+				</view>
+				<view class="c-b-content">
+					<view class="c-b-text">{{item.r}}</view>
+				</view>
+			</view>
+
+		</block>
+	</view>
+
+</scroll-view>
+
+
+<view class="chart-inp">
+	<form class="chart-f" bindsubmit="sendMsg">
+		<view class="chart-v">
+			<input class="view-item" id="chartInp" name="chartInp" placeholder="输入..." />
+			<button class="view-item" form-type="submit">发送</button>
+		</view>
+	</form>
+</view>

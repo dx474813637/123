@@ -1,0 +1,11 @@
+<!--pages/demo02/demo02.wxml-->
+<view wx:for="{{list}}" class="row" wx:key="index">
+	<movable-area class="movable-area">
+		<movable-view class="movable-view" bindtouchstart="touchStart" bindtouchmove="touchMove" data-index="{{index}}">
+			<view class="view-row {{ item.flag ? 'active': ''}}">
+				<view class="row-title">{{item.content}}</view>
+				<view class="row-del" data-index="{{index}}" catchtouchstart="del">删除</view>
+			</view>
+		</movable-view>
+	</movable-area>
+</view>

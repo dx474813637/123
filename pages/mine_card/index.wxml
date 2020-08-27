@@ -1,0 +1,8 @@
+<!--pages/mine_card/index.wxml-->
+<van-cell-group>
+    <van-cell title="会员卡" icon="vip-card-o" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="券和礼品卡" icon="coupon-o" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+    <van-cell title="票证" icon="idcard" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>

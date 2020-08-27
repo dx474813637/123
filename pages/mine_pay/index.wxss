@@ -1,0 +1,38 @@
+/* pages/mine_pay/index.wxss */
+.mine_pay{
+    text-align: center;
+    color: #fff;
+    background-color: #1e90ff;
+    padding: 30px 0px 25px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.mine_pay .disflex {
+    display: flex;
+    flex-direction: column;
+}
+.mine_pay .disflex .name {
+    /* font-size: 14px; */
+    
+}
+.mine_pay .disflex .van-icon {
+    margin-bottom: 10px;
+}
+.server {
+    margin: 0 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.title {
+    line-height: 40px;
+    padding: 0px 10px;
+    /* font-size: 14px; */
+}
+.server .van-icon {
+    color: #1e90ff;
+}
+.van-grid-item__text {
+    font-size: 14px;
+}

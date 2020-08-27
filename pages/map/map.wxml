@@ -1,0 +1,18 @@
+<!--pages/map/map.wxml-->
+<map
+  style="width: 100%; height: 300px"
+  id="mymap"
+  longitude="113.324520"
+  latitude="23.099994"
+  scale="14"
+  markers="{{markers}}"
+  bindcontroltap="controltap"
+  bindmarkertap="markertap"
+  show-location="{{locationFlag}}"
+>
+</map>
+
+<button bindtap="getCenter">获取屏幕中心经纬度</button>
+<button bindtap="moveTo">返回已获取的中心点位</button>
+<button bindtap="moveCurTo">返回当前所在点位</button>
+<button bindtap="moveMarkerTo">获取中心并移动标记坐标</button>

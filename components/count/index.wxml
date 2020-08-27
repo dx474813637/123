@@ -1,0 +1,3 @@
+<!--components/count/index.wxml-->
+<view >{{num}}</view> <button bindtap="handleCount">+1</button>
+<!-- <hr> -->

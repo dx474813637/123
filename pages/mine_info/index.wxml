@@ -1,0 +1,12 @@
+<!--pages/mine_info/index.wxml-->
+<van-cell-group>
+    <van-cell title="头像" is-link link-type="navigateTo" />
+    <van-cell title="名字" value="Null" is-link link-type="navigateTo" />
+    <van-cell title="拍一拍" is-link link-type="navigateTo" />
+    <van-cell title="微信号" value="dx474813637" is-link link-type="navigateTo" />
+    <van-cell title="我的二维码" is-link link-type="navigateTo" />
+    <van-cell title="更多" is-link link-type="navigateTo" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="我的地址" is-link link-type="navigateTo" />
+</van-cell-group>

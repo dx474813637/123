@@ -1,0 +1,14 @@
+<!--pages/demo06/demo06.wxml-->
+<text>pages/demo06/demo06.wxml</text>
+<navigator url="/pages/demo05/demo05">navigate</navigator>
+<navigator url="/pages/demo05/demo05" open-type="redirect"	>redirect</navigator>
+<navigator url="/pages/book/index" open-type="switchTab"	>switchTab</navigator>
+<navigator url="/pages/demo05/demo05" open-type="reLaunch"	>reLaunch</navigator>
+
+
+
+<button bindtap="navigate">navigate</button>
+<button bindtap="switchTab">switchTab</button>
+<button bindtap="reLaunch">reLaunch</button>
+
+<button bindtap="showActionSheet">showActionSheet</button>

@@ -1,0 +1,2 @@
+<!--components/comp2/index.wxml-->
+<text bindtap="xx">components/comp2/index.wxml</text>

@@ -1,0 +1,108 @@
+/* pages/robot/robot.wxss */
+page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+.chart-box {
+  height: calc(100% - 50px);
+  background-color: #f7f7f7;
+}
+.chart-inp {
+  height: 50px;
+  width: 100vw;
+  box-shadow: 0px -5px 15px rgba(0,0,0,.1);
+}
+.chart-inp .chart-f {
+  height: 100%;
+  width: 100%;
+}
+.chart-v {
+  display: flex;
+  height: 100%;
+  padding: 0px 20px;
+  align-items: center;
+}
+.chart-v .view-item {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+}
+.chart-v input.view-item {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 0px 10px;
+}
+.chart-v button.view-item {
+  margin-left: 10px;
+  font-size: .8rem;
+  background-color: dodgerblue;
+  color: #fff;
+}
+.c-b-row {
+  padding: 0px 60px;
+  position: relative;
+  min-height: 60px;
+}
+.c-b-row .tx {
+  width: 40px;
+  height: 40px;
+}
+.c-b-pic {
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 0 5px rgba( 0,0,0,.1); */
+}
+.isay .c-b-pic {
+  right: 10px;
+}
+.robot .c-b-pic {
+  left: 10px;
+}
+.c-b-content {
+  padding: 10px;
+  display: flex;
+}
+.isay .c-b-content {
+  flex-direction: row-reverse;
+}
+.c-b-text {
+  background-color: #fff;
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  /* box-shadow: 0 0 5px rgba(0,0,0,.1); */
+  border-radius: 8px;
+  color: #666;
+  position: relative;
+}
+.c-b-text::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top:6px solid transparent;
+  border-bottom:6px solid transparent;
+}
+
+.isay .c-b-text {
+  background-color: #07c160;
+  color: #fff;
+}
+
+.robot .c-b-text::after {
+  border-left: 0;
+  border-right:6px solid #fff;
+  right: 100%
+} 
+.isay .c-b-text::after {
+  border-left:6px solid #07c160;
+  border-right: 0;
+  left: 100%;
+}

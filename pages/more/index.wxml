@@ -1,0 +1,27 @@
+<!--pages/more/index.wxml-->
+
+<van-cell-group>
+    <van-cell title="朋友圈" icon="star-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="视频号" icon="video-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="扫一扫" icon="scan" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+    <van-cell title="摇一摇" icon="location-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="看一看" icon="eye-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+    <van-cell title="搜一搜" icon="search" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="附近的人" icon="friends-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="购物" icon="bag-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+    <van-cell title="游戏" icon="flag-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="小程序" icon="fire-o" is-link link-type="navigateTo" url="/pages/demo1/demo1" />
+</van-cell-group>
+<comp1></comp1>

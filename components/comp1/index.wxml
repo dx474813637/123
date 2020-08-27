@@ -1,0 +1,6 @@
+<!-- components/comp1/index.wxml -->
+<view bindtap="handletAP">
+    <view>components/comp1/index.wxml</view>
+    <slot name="slot1"></slot>
+    <slot name="slot2"></slot>
+</view>

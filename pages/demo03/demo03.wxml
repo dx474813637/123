@@ -1,0 +1,29 @@
+<!--pages/demo03/demo03.wxml-->
+
+<video
+  class="video"
+  src="{{src}}"
+  id="v"
+  controls
+  danmu-btn
+  vslide-gesture
+  enable-play-gesture
+  enable-auto-rotation
+  show-screen-lock-button
+  bindplay="playEvent"
+  bindpause="pauseEvent"
+  danmu-list="{{danmuList}}"
+  poster="http://tiebapic.baidu.com/forum/w%3D580%3B/sign=c71812586cec54e741ec1a1689039a50/9358d109b3de9c82377f66e97b81800a19d843ba.jpg"
+>
+  <!-- <cover-view class="mask" bindtap="xx">
+    <block wx:if="{{!play}}">
+      <cover-image class="cover-image" src="../../img/strat.png"></cover-image>
+    </block>
+  </cover-view> -->
+</video>
+
+<button bindtap="getVideo">获取视频</button>
+<button bindtap="xx">{{!play? '播放': '暂停'}}</button>
+
+<input id="send" name="send" model:value="{{danmu}}" placeholder="输入弹幕"></input>
+<button bindtap="send">发送弹幕</button>

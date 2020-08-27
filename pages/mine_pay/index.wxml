@@ -1,0 +1,54 @@
+<!-- pages/mine_pay/index.wxml -->
+<view class="mine_pay">
+    <van-row>
+        <van-col span="12">
+            <view class="disflex">
+                <van-icon name="scan" size="35px" />
+                <p class="name">收付款</p>
+            </view>
+        </van-col>
+        <van-col span="12">
+            <view class="disflex">
+                <van-icon name="paid" size="35px" />
+                <p class="name">钱包</p>
+                <p class="name" style="font-size:12px;color: #d4e7f9;">￥ 3.00</p>
+            </view>
+        </van-col>
+    </van-row>
+</view>
+<view class="server">
+    <van-row>
+        <van-col span="24">
+            <p class="title">腾讯服务</p>
+        </van-col>
+        <van-col span="24">
+            <van-grid column-num="3">
+                <van-grid-item icon="{{item.icon}}" text="{{item.name}}" wx:for="{{ serverList }}" wx:key="index" />
+            </van-grid>
+        </van-col>
+    </van-row>
+</view>
+<view class="server">
+    <van-row>
+        <van-col span="24">
+            <p class="title">限时推广</p>
+        </van-col>
+        <van-col span="24">
+            <van-grid column-num="3">
+                <van-grid-item icon="{{item.icon}}" text="{{item.name}}" wx:for="{{ limitTimeList }}" wx:key="index" />
+            </van-grid>
+        </van-col>
+    </van-row>
+</view>
+<view class="server">
+    <van-row>
+        <van-col span="24">
+            <p class="title">第三方服务</p>
+        </van-col>
+        <van-col span="24">
+            <van-grid column-num="3">
+                <van-grid-item icon="{{item.icon}}" text="{{item.name}}" wx:for="{{ otherServer }}" wx:key="index" />
+            </van-grid>
+        </van-col>
+    </van-row>
+</view>

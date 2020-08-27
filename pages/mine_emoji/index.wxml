@@ -1,0 +1,97 @@
+<!-- pages/mine_emoji/index.wxml -->
+<van-search
+  value="{{ value }}"
+  shape="round"
+  placeholder="搜索表情"
+/>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+    </block>
+</swiper>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col span="6" style="text-align:center">
+      <van-image width="60" height="60" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </van-col>
+  <van-col span="12">
+      <p class="title">表情标题123</p>
+      <p class="sub">表情副标题描述123</p>
+  </van-col>
+  <van-col span="6">
+      <view class="add-btn">添加</view>
+  </van-col>
+</van-row>

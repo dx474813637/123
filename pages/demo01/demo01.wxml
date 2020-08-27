@@ -1,0 +1,54 @@
+<!-- pages/demo01/demo01.wxml -->
+<scroll-view 
+    class="nav" 
+    scroll-x="{{true}}" 
+    enable-flex="{{true}}"
+    scroll-with-animation="{{true}}"
+    scroll-left="{{scrollLeft}}"
+>
+    <view 
+        class="nav-item {{navCurActive == index? 'active': ''}}"
+        wx:for="{{navList}}" 
+        wx:key="index" 
+        data-index="{{index}}" 
+        bindtap="handleNavTap"
+    >
+        {{item.terms}}
+    </view>
+</scroll-view>
+<swiper 
+    id="swoper" 
+    class="swiper-box" 
+    current="{{navCurActive}}" 
+    bindchange="swiperChange" 
+    duration="200" 
+    style="height: {{winHeight}}px"
+>
+    <block wx:for="{{navList}}" wx:key="index" >
+        <swiper-item 
+            class="bg {{'bg' + index}}" 
+            item-id="{{index}}" 
+            id="{{index}}"
+            :flag="false"
+        >
+            <scroll-view 
+                scroll-y="{{true}}" 
+                class="listH" 
+                enable-back-to-top="true" 
+                refresher-enabled="{{true}}"
+                refresher-triggered="{{loading}}"
+                refresher-background="#eee"
+                bindrefresherrefresh="handleRefresh"
+                bindscrolltolower="handleScrollBottom"
+                data-index="{{index}}"
+            >
+                <view
+                    class="article"
+                    wx:for="{{dataList[index]}}"
+                    wx:key="id"
+                >{{item.title}}</view>
+            </scroll-view>
+            
+        </swiper-item>
+    </block>
+</swiper>

@@ -1,0 +1,44 @@
+<!--pages/demo05/demo05.wxml-->
+<form catchsubmit="handleSubmit">
+  <view class="i-row">
+    <label for="name">姓名</label>
+    <input name="name" id="name" placeholder="姓名" type="text" bindblur="inputName"></input>
+  </view>
+  <view class="i-row">
+    <label>性别</label>
+    <radio-group bindchange="radioChange">
+      <label for="{{item.name}}" wx:for="{{isex}}" wx:key="index">
+        <radio color="#f90" name="sex" checked="{{item.checked}}" value="{{item.value}}" id="{{item.name}}" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="i-row">
+    <label>职业</label>
+    <checkbox-group bindchange="checkedChange">
+      <label for="{{item.name}}" wx:for="{{ilike}}" wx:key="index">
+        <checkbox color="#ff0000" name="like" checked="{{item.checked}}" value="{{item.value}}" id="{{item.name}}" />{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="i-row">
+    <label>选择器</label>
+    <picker mode="time" value="{{itime}}" bindchange="timeChange">
+      <view>当前选择{{itime}}</view>
+    </picker>
+    <picker mode="date" value="{{idate}}" bindchange="dateChange" start="2018-01-01">
+      <view>当前选择{{idate}}</view>
+    </picker>
+    <picker mode="selector" range="{{selectorArr}}" range-key="name" value="{{index}}" bindchange="selectorChange" >
+      <view>当前选择{{selectorArr[index].name}}</view>
+    </picker>
+    <picker mode="multiSelector" range="{{multiSelectorArr}}" value="{{indexArr}}" range-key="name" bindchange="multiSelectorChange" >
+      <view>当前选择{{multiSelectorArr[0][indexArr[0]].name}}, {{multiSelectorArr[1][indexArr[1]].name}}, {{multiSelectorArr[2][indexArr[2]].name}}</view>
+    </picker>
+    <picker mode="region" value="{{area}}" custom-item="{{'全部'}}" bindchange="areaChange" >
+      <view>当前选择{{area[0]}}-{{area[1]}}-{{area[2]}}</view>
+    </picker>
+  </view>
+  <button formType="submit">提交</button>
+</form>
+<button bindtap='cc'>xx</button>
+<!-- <navigator open-type="navigateBack"	>navigateBack</navigator> -->

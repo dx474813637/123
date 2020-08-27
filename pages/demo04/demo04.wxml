@@ -1,0 +1,5 @@
+<!--pages/demo04/demo04.wxml-->
+
+<image src="{{src}}"></image>
+<progress percent="{{p}}" active duration="5" border-radius="10" stroke-width="10"></progress>
+<button bindtap="download" data-src="{{src}}">下载{{progress}}</button>

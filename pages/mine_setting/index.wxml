@@ -1,0 +1,18 @@
+<!--pages/mine_setting/index.wxml-->
+<van-cell-group>
+    <van-cell title="账号与安全" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="新消息通知" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+    <van-cell title="隐私" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+    <van-cell title="通用" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="帮助与反馈" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+    <van-cell title="关于微信" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<van-cell-group>
+    <van-cell title="插件" is-link link-type="navigateTo" url="/pages/mine_pay/index" />
+</van-cell-group>
+<view class="setting-btn">切换账号</view>
+<view class="setting-btn" >退出登录</view>
