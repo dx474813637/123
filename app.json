@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/image/image",
     "pages/chart/index",
     "pages/index/index",
     "pages/logs/logs",
@@ -26,8 +27,7 @@
     "pages/robot/robot",
     "pages/fontload/fontload",
     "pages/record/record",
-    "pages/map/map",
-    "pages/map2/map2"
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",

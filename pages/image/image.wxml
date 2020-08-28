@@ -1,0 +1,11 @@
+<!--pages/image/image.wxml-->
+<button bindtap="chooseImage">选择图片</button>
+<button bindtap="getInfo">获取图片信息</button>
+<button bindtap="preview">预览图片</button>
+<button bindtap="download">下载图片</button>
+<button bindtap="save">保存图片</button>
+<view class="imgBox">
+  <image class="img-item" wx:for="{{imgList}}" wx:key="index" src="{{item}}"></image>
+</view>
+
+<image src="{{downImg}}"></image>
