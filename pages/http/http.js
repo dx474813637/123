@@ -1,5 +1,6 @@
 // pages/http/http.js
 let http = require("../../utils/http.js")
+console.log('qan7')
 console.log('qan4')
 console.log('qan3')
 Page({
