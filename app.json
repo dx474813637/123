@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/image/image",
     "pages/chart/index",
     "pages/index/index",
     "pages/logs/logs",
@@ -28,6 +27,7 @@
     "pages/fontload/fontload",
     "pages/record/record",
     "pages/http/http",
+    "pages/image/image",
     "pages/map/map"
   ],
   "window": {
