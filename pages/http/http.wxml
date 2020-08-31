@@ -1,0 +1,2 @@
+<!--pages/http/http.wxml-->
+<button bindtap="http">http</button>

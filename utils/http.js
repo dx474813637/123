@@ -1,11 +1,11 @@
 const app = getApp()
 
-function http (url, method, data) {
+function http (url, data, method) {
     return new Promise((resolve, reject) => {
         wx.request({
             url: url,
             data: data,
-            method: method,
+            method: method || 'GET',
             success: function(res) {
                 if(res.statusCode !== 200) {
                     reject({err: res.errMsg, statusCode: res.statusCode})
@@ -21,6 +21,4 @@ function http (url, method, data) {
     })
 }
 
-module.exports = {
-    http
-}
+module.exports = http
