@@ -5,9 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    num1: 3,
+    num2: 1,
+    num3: 2,
+    num4: 4
   },
-
+  handleEvent(e) {
+    var obj = e.detail
+    this.setData({
+      num1: obj['num1'],
+      num2: obj['num2']
+    })
+  },
+  handleEvent2(e) {
+    var obj = e.detail
+    this.setData({
+      num3: obj['num1'],
+      num4: obj['num2']
+    })
+  },
+  handleClick() {
+    this.setData({
+      num1: this.data.num1 * 2,
+      num2: this.data.num2 * 2,
+      num3: this.data.num3 * 2,
+      num4: this.data.num4 * 2
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

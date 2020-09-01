@@ -1,0 +1,5 @@
+<!--components/add/index.wxml-->
+<view style="margin-bottom: 20px">
+  <view>{{num1}} + {{num2}} = {{sum}}</view>
+  <l-button type="default" bindtap="handleClick" size="mini">2倍</l-button>
+</view>

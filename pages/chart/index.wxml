@@ -1,2 +1,3 @@
 <!--pages/chart/index.wxml-->
-<text>pages/chart/index.wxml</text>
+<add num1="{{num1}}" num2="{{num2}}" bindaddevent="handleEvent"></add>
+<add num1="{{num3}}" num2="{{num4}}" bindaddevent="handleEvent2"></add>

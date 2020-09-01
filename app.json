@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/chart/index",
+    "pages/more/index",
+    "pages/feed/feed",
+    "pages/feedForm/feedForm",
     "pages/index/index",
     "pages/logs/logs",
     "pages/demo1/demo1",
@@ -12,7 +15,6 @@
     "pages/mine_photo/index",
     "pages/mine_emoji/index",
     "pages/mine_setting/index",
-    "pages/more/index",
     "pages/book/index",
     "pages/demo01/demo01",
     "pages/mine_card/index",
@@ -76,7 +78,8 @@
     "van-grid-item": "@vant/weapp/grid-item/index",
     "van-search": "@vant/weapp/search/index",
     "van-swipe-cell": "@vant/weapp/swipe-cell/index",
-    "van-image": "@vant/weapp/image/index"
+    "van-image": "@vant/weapp/image/index",
+    "l-button": "lin-ui/button/index"
   },
   "permission": {
     "scope.userLocation":{
