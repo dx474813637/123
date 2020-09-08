@@ -1,0 +1,184 @@
+<!--pages/cf/index.wxml-->
+<view class="cf-header">
+  <view class="cf-header-nav">
+    <view class="nav-active-bg-block" style="margin-left: {{curIndex == 0? '0': '50%'}}"></view>
+    <view class="cf-nav" bindtap="navTap">
+      <view class="cf-nav-item {{curIndex == 0? 'active': ''}}" data-index="0">我的采访</view>
+      <view class="cf-nav-item {{curIndex == 1? 'active': ''}}" data-index="1">记者提问</view>
+    </view>
+  </view>
+</view>
+<view class="cf-content">
+  <swiper class="content-swiper" current="{{curIndex}}" bindchange="changeIndex">
+    <swiper-item>
+      <scroll-view class="w-cf" scroll-y="{{true}}">
+        <swiper 
+          class="rw-swiper"
+          previous-margin="60px"
+          next-margin="60px"
+          autoplay
+          circular
+          interval="6000"
+        >
+          <swiper-item wx:for="{{rwList}}" wx:key="index">
+            <view class="rw-bg">
+              <view class="rw-top">
+                <view class="rw-img" style="background-image: url({{item.img}})"></view>
+                <view class="rw-info">
+                  <view class="rw-name">{{item.name}}</view>
+                  <view class="rw-sub">{{item.position}}</view>
+                </view>
+              </view>
+              <view class="rw-content">{{item.content}}</view>
+            </view>
+          </swiper-item>
+        </swiper>
+
+        <view class="w-cf-ad">
+          <view class="ad-title">JZB 帮记者找专家</view>
+          <view>3000多位媒体记者用JZB与专家取得联系</view>
+          <view>10000多位专家用JZB接受记者采访、解答记者问题</view>
+         
+        </view>
+        <view style="text-align: center; padding: 10px 10%;margin-bottom: 40px">
+         <van-button type="default" round size="large" color="royalblue">赶紧认证吧</van-button>
+        </view>
+        
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="j-cf" scroll-y="{{true}}">
+        <view class="jz-q-list">
+          <van-tabs active="{{cfActive}}" bind:change="cfChange">
+            <van-tab title="全部">
+              <view class="cf-list">
+                <!-- 专家回答 -->
+                <view class="cf-l-card card-a">
+                  <view class="card-info">
+                    <image class="card-img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2440685909,502131744&fm=26&gp=0.jpg" />
+                    <view class="person">
+                      <view class="person-name">
+                        <text class="name">姓名</text>
+                        <text class="label">专家</text>
+                      </view>
+                      <view class="person-position">某某公司高级管理</view>
+                    </view>
+                    <view class="post-time">8分钟前</view>
+                  </view>
+                  <view class="card-content">浙江网盛生意宝股份有限公司（原浙江网盛科技股份有限公司）是一家专业从事互联网信息服务、电子商务和企业应用软件开发的高科技企业，是国内最大的垂直专业网站开发运营商，国内专业B2B电子商务标志性企业。 </view>
+                  <view class="card-rep">
+                    <view class="card-rep-info">
+                      <view class="rep-name">姓名</view>
+                      <view class="rep-label">记者</view>
+                      <view class="rep-position">中国xx报</view>
+                      <view class="rep-sub">1人参与了解答</view>
+                    </view>
+                    <view class="card-rep-content">浙江网盛生意宝股份有限公司（原浙江网盛科技股份有限公司）是一家专业从事互联网信息服务、电子商务和企业应用软件开发的高科技企业，是国内最大的垂直专业网站开发运营商，国内专业B2B电子商务标志性企业。 </view>
+                  </view>
+                  <view class="card-footer">
+                    <view class="card-f-item" bindtap="dudong">
+                      <van-icon name="eye-o" size="25px" color="#666" />
+                      <text>读懂</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="good-job-o" size="25px" color="#666" />
+                      <text>1</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="chat-o" size="25px" color="#666" />
+                      <text>回复</text>
+                    </view>
+                    <view class="card-f-item" bindtap="shareEvent">
+                      <van-icon name="share" size="25px" color="#999" />
+                      <text>分享</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="ellipsis" size="25px" color="#666" />
+                    </view>
+                  </view>
+                </view>
+                <!-- 记者采访 -->
+                <view class="cf-l-card card-q">
+                  <view class="card-title">2020年护发素将客户大数据库</view>
+                  <view class="card-info">
+                    <image class="card-img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2440685909,502131744&fm=26&gp=0.jpg" />
+                    <text class="name">姓名</text>
+                    <text class="label">记者</text>
+                    <view class="person-position">某某公司高级管理</view>
+                    <view class="post-time">8分钟前</view>
+                  </view>
+                  <view class="card-content">浙江网盛生意宝股份有限公司（原浙江网盛科技股份有限公司）是一家专业从事互联网信息服务、电子商务和企业应用软件开发的高科技企业，是国内最大的垂直专业网站开发运营商，国内专业B2B电子商务标志性企业。 </view>
+                  
+                  <view class="card-footer">
+                     <view class="img-list">
+                      <image class="img-item" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599023586224&di=91a52fb6be1982151cc9a2ee76dd884a&imgtype=0&src=http%3A%2F%2Fpic.qqtn.com%2Fup%2F2016-3%2F2016033110353858909.jpg" /> 
+                      <image class="img-item" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=784776349,2280551942&fm=11&gp=0.jpg" /> 
+                      <image class="img-item" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599023612536&di=9945297cd841965ab85d5feb5d0e4ba6&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3Df6c3bf2ed009b3deebbfe460fcbe6cd3%2F822789014a90f603d30084013812b31bb151ed6d.jpg" /> 
+                    </view>
+                    <view class="l-num"><text class="num">3</text>人参与</view>
+                    <van-button class="l-btn" type="primary" icon="plus" size="mini" color="dodgerblue" plain round>解答</van-button>
+                  </view>
+                </view>
+                <!-- 专家回答 -->
+                <view class="cf-l-card card-a">
+                  <view class="card-info">
+                    <image class="card-img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2440685909,502131744&fm=26&gp=0.jpg" />
+                    <view class="person">
+                      <view class="person-name">
+                        <text class="name">姓名</text>
+                        <text class="label">专家</text>
+                      </view>
+                      <view class="person-position">某某公司高级管理</view>
+                    </view>
+                    <view class="post-time">8分钟前</view>
+                  </view>
+                  <view class="card-content">浙江网盛生意宝股份有限公司（原浙江网盛科技股份有限公司）是一家专业从事互联网信息服务、电子商务和企业应用软件开发的高科技企业，是国内最大的垂直专业网站开发运营商，国内专业B2B电子商务标志性企业。 </view>
+                  <view class="card-rep">
+                    <view class="card-rep-info">
+                      <view class="rep-name">姓名</view>
+                      <view class="rep-label">记者</view>
+                      <view class="rep-position">中国xx报</view>
+                      <view class="rep-sub">1人参与了解答</view>
+                    </view>
+                    <view class="card-rep-content">浙江网盛生意宝股份有限公司（原浙江网盛科技股份有限公司）是一家专业从事互联网信息服务、电子商务和企业应用软件开发的高科技企业，是国内最大的垂直专业网站开发运营商，国内专业B2B电子商务标志性企业。 </view>
+                  </view>
+                  <view class="card-footer">
+                    <view class="card-f-item">
+                      <van-icon name="eye-o" size="25px" color="#666" />
+                      <text>读懂</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="good-job-o" size="25px" color="#666" />
+                      <text>1</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="chat-o" size="25px" color="#666" />
+                      <text>回复</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="share" size="25px" color="#999" />
+                      <text>分享</text>
+                    </view>
+                    <view class="card-f-item">
+                      <van-icon name="ellipsis" size="25px" color="#666" />
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </van-tab>
+            <van-tab title="只看提问">2</van-tab>
+            <van-tab title="只看解答">3</van-tab>
+          </van-tabs>
+          <view style="height: 40px"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+<van-share-sheet
+  show="{{ showShare }}"
+  title="立即分享给好友"
+  options="{{ options }}"
+  cancel="shareEvent"
+  click-overlay="shareEvent"
+/>

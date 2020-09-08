@@ -1,0 +1,313 @@
+/* pages/cf/index.wxss */
+page {
+  /* background-color: dodgerblue; */
+}
+.cf-header {
+  position: relative;
+  background-color: #fff;
+  height: 25px;
+  padding: 0px 15px;
+  z-index: 1;
+}
+.cf-header-nav {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 25px;
+  height: 45px;
+  top: 5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 30px);
+  box-shadow: 0 -5px 5px rgba(0,0,0,0.05);
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.cf-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.cf-nav-item {
+  width: 50%;
+  text-align: center;
+  line-height: 45px;
+  color: dodgerblue;
+}
+.cf-nav-item.active {
+  color: #fff;
+  font-weight: bold;
+}
+.nav-active-bg-block {
+  width: 50%;
+  height: 35px;
+  background-color: dodgerblue;
+  border-radius: 20px;
+  transition: all .3s;
+}
+.rw-bg {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+  background: rgba(10,104,255,1);
+background: -moz-linear-gradient(45deg, rgba(10,104,255,1) 0%, rgba(10,104,255,1) 16%, rgba(105,155,255,1) 69%, rgba(88,140,219,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(10,104,255,1)), color-stop(16%, rgba(10,104,255,1)), color-stop(69%, rgba(105,155,255,1)), color-stop(100%, rgba(88,140,219,1)));
+background: -webkit-linear-gradient(45deg, rgba(10,104,255,1) 0%, rgba(10,104,255,1) 16%, rgba(105,155,255,1) 69%, rgba(88,140,219,1) 100%);
+background: -o-linear-gradient(45deg, rgba(10,104,255,1) 0%, rgba(10,104,255,1) 16%, rgba(105,155,255,1) 69%, rgba(88,140,219,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(10,104,255,1) 0%, rgba(10,104,255,1) 16%, rgba(105,155,255,1) 69%, rgba(88,140,219,1) 100%);
+background: linear-gradient(45deg, rgba(10,104,255,1) 0%, rgba(10,104,255,1) 16%, rgba(105,155,255,1) 69%, rgba(88,140,219,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a68ff', endColorstr='#588cdb', GradientType=1 );
+}
+.rw-top {
+  display: flex;
+  padding: 20px 20px 0px;
+}
+.rw-img {
+  width: 60px;
+  height: 80px;
+  border-radius: 5px 5px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.rw-info {
+  flex: 1;
+  text-align: center;
+  color: #fff
+}
+.rw-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.rw-sub {
+  font-size: 12px;
+}
+.rw-content {
+  height: 160px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  background-color: rgba(255,255,255,.1);
+  padding: 20px;
+  box-sizing: border-box;
+  text-indent: 2em;
+}
+.rw-swiper {
+  height: 300px;
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+.cf-content {
+  position: relative;
+  height: calc(100% - 75px);
+  z-index: 0;
+}
+.content-swiper {
+  height: 100%;
+}
+.w-cf, .j-cf {
+  height: 100%;
+}
+.rw-swiper swiper-item {
+  padding: 0px 20px;
+  width: calc(100% - 120px);
+  box-sizing: border-box;
+}
+.w-cf-ad {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+.w-cf-ad view {
+  margin-bottom: 10px;
+}
+.ad-title {
+  line-height: 45px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  width: 70%;
+  margin: 0 auto;
+}
+.jz-q-list {
+  padding-top: 40px;
+}
+.j-cf {
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+.j-cf .van-tabs__line {
+  background-color: dodgerblue;
+}
+.j-cf .van-tab {
+  line-height: 35px;
+  height: 35px;
+}
+.j-cf .van-tabs--line .van-tabs__wrap {
+  height: 35px;
+  border-radius: 2px;
+}
+.cf-l-card {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.card-q .card-info {
+  height: 40px;
+}
+.card-q .person-position {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.card-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.card-q .card-img {
+  width: 30px;
+  height: 30px;
+}
+.cf-l-card .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.cf-l-card .label, .rep-label {
+  margin-left: 10px;
+  background-color: #333;
+  color: #f1cd7f;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 18px;
+  padding: 0px 6px;
+  border-radius: 3px;
+}
+.person-position {
+  color: #999;
+  margin-top: 5px;
+}
+.post-time {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  color: #999;
+}
+.card-q .post-time {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 40px;
+}
+.card-content {
+  font-size: 16px;
+  padding: 5px 0px;
+  line-height: 24px;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px;
+}
+.card-rep {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.card-rep-info {
+  display: flex;
+  position: relative;
+  margin-bottom: 5px;
+}
+.rep-sub {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #999;
+}
+.rep-name {
+  font-weight: bold;
+}
+.rep-position {
+  color: #999;
+}
+.rep-label {
+  font-size: .7em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card-rep-content {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  line-height: 30px;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  color: #666;
+  position: relative;
+}
+.card-q .card-footer {
+  justify-content: flex-start;
+}
+.card-f-item {
+  display: flex;
+  align-items: center;
+}
+.card-f-item text{
+  margin-left: 5px;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 35px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.img-item {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.l-num {
+  line-height: 25px;
+  color: #999;
+  margin-left: 15px;
+}
+.num {
+  color: dodgerblue;
+}
+.l-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 14px;
+  height: 20px;
+}

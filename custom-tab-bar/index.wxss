@@ -1,0 +1,76 @@
+/* custom-tab-bar/index.wxss */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: white;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tab-bar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item cover-image {
+  width: 27px;
+  height: 27px;
+}
+.tab-bar-item.center cover-image {
+  width: 40px;
+  height: 40px;
+}
+
+.tab-bar-item cover-view {
+  font-size: 10px;
+}
+.center van-icon {
+  font-size: 40px;
+  color: #fff;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 50;
+  position: relative;
+  top: -10px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(21, 136, 243, 0.3);
+}
+.center .van-tabbar-item--active van-icon {
+  background-color: royalblue;
+}
+.center-i van-icon {
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 50;
+  position: relative;
+  top: -10px;
+  border: 3px solid #fff;
+  background-color: #fff;
+  color: dodgerblue;
+  box-shadow: 0 0 15px rgba(21, 136, 243, 0.4);
+  transition: all .3s;
+}
+.center-i van-icon.active {
+  background-color: dodgerblue;
+  border-color: #fff;
+  color: #fff;
+}

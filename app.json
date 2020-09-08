@@ -1,0 +1,65 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/wd/index",
+    "pages/cf/index",
+    "pages/zj/index",
+    "pages/dt/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "JZB",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#666666",
+    "borderStyle": "white",
+    "selectedColor": "#1e90ff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "资讯",
+      "iconPath": "/images/icon-index.png",
+      "selectedIconPath": "/images/icon-index-active.png"
+    }, {
+      "pagePath": "pages/zj/index",
+      "text": "专家",
+      "iconPath": "/images/icon-zj.png",
+      "selectedIconPath": "/images/icon-zj-active.png"
+    }, {
+      "pagePath": "pages/cf/index",
+      "text": "发现",
+      "iconPath": "/images/icon-cf.png",
+      "selectedIconPath": "/images/icon-cf-active.png"
+    }, {
+      "pagePath": "pages/dt/index",
+      "text": "动态",
+      "iconPath": "/images/icon-dt.png",
+      "selectedIconPath": "/images/icon-dt-active.png"
+    }, {
+      "pagePath": "pages/wd/index",
+      "text": "我的",
+      "iconPath": "/images/icon-wd.png",
+      "selectedIconPath": "/images/icon-wd-active.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "custom-tab-bar": "/custom-tab-bar/index"
+  }
+}

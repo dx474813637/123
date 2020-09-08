@@ -1,0 +1,87 @@
+<!--pages/index/index.wxml-->
+<view class="index-nav-w">
+  <view class="index-nav-btn"><van-icon name="bars" color="dodgerblue" size="30px" /></view>
+  <view class="index-nav">
+    <scroll-view 
+      scroll-x="{{true}}" 
+      enable-flex="{{true}}"
+      scroll-with-animation="{{true}}"
+      class="index-nav-scroll"
+      scroll-into-view="item{{curIndex < 2 ? 0 : curIndex - 1}}"
+    >
+      <view 
+        class="i-n-s-item {{index == curIndex ? 'active': ''}}" 
+        wx:for="{{navList}}" 
+        wx:key="index"
+        data-index="{{index}}"
+        data-type="{{item.type}}"
+        bindtap="navChange"
+        id="item{{index}}"
+      >{{item.name}}</view>
+    </scroll-view>  
+  </view>
+  <view class="index-search">
+  <!-- <van-icon name="search" color="dodgerblue" size="30px" /> -->
+    <image src="/images/icon-search.png"></image>
+  </view>
+</view>
+
+<swiper 
+  class="swiper"
+  bindchange="swiperChange"
+  bindanimationfinish="swiperanimationEnd"
+  current="{{curIndex}}"
+>
+  <swiper-item 
+    class="swiper-item"
+    wx:for="{{navList}}"
+    wx:key="index"
+  >
+    <scroll-view 
+      scroll-y="{{true}}" 
+      class="swiper-i-c" 
+      refresher-enabled 
+      refresher-triggered="{{item.refresh}}"
+      bindscrolltolower="scrollBottomEvent"
+      data-index="{{index}}"
+      bindrefresherrefresh="refresherrefresh"
+    >
+      <view class="list-item" wx:for="{{item.data}}" wx:for-item="data" wx:key="index">
+        <navigator url="">
+          <view class="l-banner" style="background-image: url({{data.bannerUrl}})"></view>
+          <view class="l-info">
+            <view class="l-title">{{data.title}}</view>
+            <view class="l-sub">
+              <text class="l-s-author">{{data.author}}</text>
+              <text class="l-s-date">{{data.date}}</text>
+            </view>
+            <view class="l-expert">
+              <view class="l-expert-header">
+                <image class="expert-avator" src="{{data.expertsList[0].img}}"></image>
+                <view class="expert-info">
+                  <view class="expert-info-main">
+                    <text class="expert-name">{{data.expertInfo.name}}</text>
+                    <text class="expert-label">{{data.expertInfo.label}}</text>
+                  </view>
+                  <view class="expert-info-sub">{{data.expertInfo.position}}</view>
+                </view>
+              </view>
+              <view class="expert-content">{{data.expertInfo.content}}</view>
+            </view>
+            <view class="l-footer">
+              <view class="img-list">
+                <image wx:for="{{data.expertsList}}" wx:for-item="imgList" wx:key="index" class="img-item" src="{{imgList.img}}"></image> 
+              </view>
+              <view class="l-num"><text class="num">{{data.expertNum}}</text>人参与</view>
+              <van-button class="l-btn" type="primary" icon="plus" size="mini" color="dodgerblue" plain round>解读</van-button>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class="loading" hidden="{{!bottomFlag}}" >
+        <van-loading color="#1989fa">加载中...</van-loading>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item class="swiper-item">2</swiper-item>
+</swiper>

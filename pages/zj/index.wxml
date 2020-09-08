@@ -1,0 +1,63 @@
+<!--pages/zj/index.wxml-->
+<view class="expert-header">
+  <navigator class="expert-search" url="">
+    <van-icon name="search" />
+    <text style="margin-left: 10px">搜索</text>
+  </navigator>
+</view>
+<view class="expert-w">
+  <view class="experts-w-left">
+    <scroll-view 
+      class="scroll-view" 
+      scroll-y="{{true}}"
+      show-scrollbar="{{false}}"
+      enhanced
+    >
+      <van-sidebar custom-class="sidebar" active-key="{{curIndex}}" bindchange="navChange">
+        <van-sidebar-item title="{{item.name}}" wx:for="{{navList}}" wx:key="index"/>
+      </van-sidebar>
+    </scroll-view>
+    
+  </view>
+  <view class="experts-list">
+    <view class="table">
+      
+      <view class="tabel-header"> 
+        <van-row>
+          <van-col span="15">专家</van-col>
+          <van-col bindtap="changeRank" span="9" style="display:{{isRank? 'block': 'none'}}">评分<van-icon name="exchange" color="#1e90ff" /></van-col>
+          <van-col bindtap="changeRank" span="9" style="display:{{!isRank? 'block': 'none'}}">采访数<van-icon name="exchange" color="#1e90ff" /></van-col>
+        </van-row>
+      </view>
+      <scroll-view class="table-list" scroll-y="{{true}}" bindscrolltolower="addNextPage">
+        <van-row wx:for="{{navList[curIndex].data}}" wx:key="index" custom-class="row">
+          <van-col span="15">
+            <navigator class="expert" url="">
+              <image class="expert-img" src="{{item.img}}" />
+              <view class="expert-info">
+                <view class="expert-name">
+                  <text class="name">{{item.name}}</text>
+                  <text class="label">{{item.label}}</text>
+                </view>
+                <view class="expert-sub">{{item.sub}}</view>
+              </view> 
+            </navigator>
+          </van-col>
+          <van-col span="6" style="display:{{isRank? 'block': 'none'}}">
+            <view class="expert-rank">{{item.rank}}</view>
+          </van-col>
+          <van-col span="6" style="display:{{isRank? 'none': 'block'}}">
+            <view class="expert-rank">{{item.count}}</view>
+          </van-col>
+          <van-col span="3">
+            <!-- <image class="icon-add" src="../../images/icon-add-f.png" /> -->
+            <van-icon class="icon-add" name="add-o" color="#1e90ff" size="20px" />
+          </van-col>
+        </van-row>
+        <view class="loading" hidden="{{!isLoading}}" >
+          <van-loading color="#1989fa">加载中...</van-loading>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

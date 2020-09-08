@@ -1,0 +1,22 @@
+<!--custom-tab-bar/index.wxml-->
+
+ 
+<!-- <cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item {{index == 2 ? 'center' : ''}}" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}}" wx:if="{{item.text}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view> -->
+
+<van-tabbar active="{{ selected }}" bind:change="onChange">
+  <van-tabbar-item icon="home-o">资讯</van-tabbar-item>
+  <van-tabbar-item icon="diamond-o">专家</van-tabbar-item>
+  <!-- <van-tabbar-item icon="fire-o" class="center"></van-tabbar-item> -->
+  <van-tabbar-item class="center-i">
+    <van-icon slot="icon" name="fire" />
+    <van-icon slot="icon-active" name="fire-o" class="active" />
+  </van-tabbar-item>
+  <van-tabbar-item icon="like-o">动态</van-tabbar-item>
+  <van-tabbar-item icon="user-circle-o">我的</van-tabbar-item>
+</van-tabbar>
